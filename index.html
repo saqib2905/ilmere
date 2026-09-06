@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILMERE Academy — Coding &amp; AI as a Timetabled Subject</title>
+<meta name="description" content="ILMERE Academy delivers real coding and AI literacy as a timetabled subject inside British-curriculum international schools in Cairo, using our own instructors on site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #16214D;
+  --navy2: #2A3B7A;
+  --ice: #D9E4FA;
+  --card: #F1F5FC;
+  --gold: #F4A81D;
+  --cyan: #12889A;
+  --ink: #1C1C2B;
+  --white: #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+}
+
+/* ---- NAV ---- */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(22, 33, 77, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.nav-contact {
+  font-size: 0.8rem;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav-contact:hover { text-decoration: underline; }
+
+/* Mobile nav toggle */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-toggle span {
+  display: block; width: 22px; height: 2px; background: var(--white);
+  margin: 5px 0; transition: 0.3s;
+}
+
+/* ---- HERO ---- */
+.hero {
+  padding: 10rem 2rem 6rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hero-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--cyan);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--navy);
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--cyan);
+}
+
+.hero-sub {
+  font-size: 1.125rem;
+  color: #4A5068;
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.hero-cta:hover { background: var(--navy2); }
+
+/* ---- SECTION SHARED ---- */
+.section {
+  padding: 5rem 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  font-size: 1.05rem;
+  color: #4A5068;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.75;
+}
+
+/* ---- DIVIDER ---- */
+.divider {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider hr {
+  border: none;
+  height: 1px;
+  background: var(--ice);
+}
+
+/* ---- WHAT WE DELIVER ---- */
+.deliver-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.deliver-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 2rem 2rem 2.25rem;
+  border-left: 3px solid var(--gold);
+}
+
+.deliver-item h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.deliver-item p {
+  font-size: 0.925rem;
+  color: #4A5068;
+  line-height: 1.7;
+}
+
+/* ---- CURRICULUM ---- */
+.curriculum-bg {
+  background: var(--navy);
+  padding: 5rem 0;
+}
+
+.curriculum-bg .section { padding-top: 0; padding-bottom: 0; }
+.curriculum-bg .section-label { color: var(--gold); }
+.curriculum-bg .section h2 { color: var(--white); }
+.curriculum-bg .section-intro { color: rgba(255,255,255,0.65); }
+
+.curriculum-spine {
+  display: grid;
+  gap: 0;
+}
+
+.spine-phase {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.spine-phase:last-child { border-bottom: none; }
+
+.spine-years {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  border-right: 2px solid var(--gold);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1.75rem;
+}
+
+.spine-content {
+  padding: 1.5rem 0 1.5rem 1.75rem;
+}
+
+.spine-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.spine-content p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+}
+
+/* ---- PARTNERSHIP ---- */
+.partnership-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.partner-col h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+.partner-col ul {
+  list-style: none;
+}
+
+.partner-col li {
+  padding: 0.6rem 0;
+  font-size: 0.925rem;
+  color: #4A5068;
+  border-bottom: 1px solid var(--ice);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.partner-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.partner-col.we-bring li::before { background: var(--cyan); }
+.partner-col.school-brings li::before { background: var(--gold); }
+
+.partner-col li:last-child { border-bottom: none; }
+
+/* ---- GETTING STARTED ---- */
+.start-bg {
+  background: var(--card);
+  padding: 5rem 0;
+}
+
+.start-bg .section { padding-top: 0; padding-bottom: 0; }
+
+.start-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  counter-reset: step;
+}
+
+.start-step {
+  counter-increment: step;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.start-step::before {
+  content: counter(step);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ice);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.start-step h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.start-step p {
+  font-size: 0.85rem;
+  color: #4A5068;
+  line-height: 1.65;
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  background: var(--navy);
+  padding: 3rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+}
+
+.footer-brand span { color: var(--gold); }
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.footer-contact a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.footer-contact a:hover { text-decoration: underline; }
+
+.footer-note {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero { padding: 8rem 1.5rem 4rem; }
+  .section { padding: 3.5rem 1.5rem; }
+  .deliver-grid { grid-template-columns: 1fr; }
+  .partnership-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .start-steps { grid-template-columns: 1fr 1fr; }
+  .spine-phase { grid-template-columns: 100px 1fr; }
+  .spine-years { font-size: 0.7rem; padding-right: 1rem; }
+  .spine-content { padding-left: 1.25rem; }
+  .curriculum-bg { padding: 3.5rem 0; }
+  .start-bg { padding: 3.5rem 0; }
+}
+
+@media (max-width: 480px) {
+  .start-steps { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-tagline { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">ILMERE<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#deliver">What We Deliver</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#partnership">Partnership</a></li>
+      <li><a href="#start">Getting Started</a></li>
+    </ul>
+    <a href="mailto:saqib@ilmere.com" class="nav-contact">saqib@ilmere.com</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <p class="hero-tagline">Where knowledge is built</p>
+  <h1>Coding and AI as a <em>timetabled subject</em>, taught by our instructors in your school</h1>
+  <p class="hero-sub">ILMERE Academy places specialist coding and AI instructors inside British-curriculum international schools in Cairo. We bring the curriculum, the platform, and the people. You provide a timetable slot and a room.</p>
+  <a href="mailto:saqib@ilmere.com" class="hero-cta">Start a Conversation</a>
+</header>
+
+<div class="divider"><hr></div>
+
+<!-- WHAT WE DELIVER -->
+<section class="section" id="deliver">
+  <p class="section-label">What We Deliver</p>
+  <h2>Real skills, not screen time</h2>
+  <p class="section-intro">Students write real code from lesson one. Every unit builds toward a portfolio piece they can demonstrate, not a multiple-choice score they forget.</p>
+
+  <div class="deliver-grid">
+    <div class="deliver-item">
+      <h3>Genuine Programming</h3>
+      <p>Students learn Python, HTML/CSS, and JavaScript through structured projects — not drag-and-drop blocks. By Year 9 they are building working applications and understanding the abstractions underneath.</p>
+    </div>
+    <div class="deliver-item">
+      <h3>AI Literacy</h3>
+      <p>From Year 7 onward, students learn how language models, classifiers, and generative tools actually work. They build with AI APIs and learn to evaluate outputs critically — the skill set employers will expect.</p>
+    </div>
+    <div class="deliver-item">
+      <h3>Portfolio Outcomes</h3>
+      <p>Each year group completes capstone projects: a personal website, an automated data tool, a trained classifier. Students leave with a portfolio of real artefacts, not just a certificate.</p>
+    </div>
+    <div class="deliver-item">
+      <h3>Our Instructors, Your School</h3>
+      <p>We recruit, vet, and train specialist instructors who teach on your premises during timetabled periods. They follow our curriculum and reporting standards, integrated with your school calendar.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- CURRICULUM -->
+<div class="curriculum-bg" id="curriculum">
+  <section class="section">
+    <p class="section-label">Curriculum Spine</p>
+    <h2>Year 1 through Year 11</h2>
+    <p class="section-intro">A progressive sequence from computational thinking to applied AI, aligned to the British curriculum and designed to run as one timetabled period per week.</p>
+
+    <div class="curriculum-spine">
+      <div class="spine-phase">
+        <div class="spine-years">Years 1 &ndash; 3</div>
+        <div class="spine-content">
+          <h3>Foundations</h3>
+          <p>Logical sequencing, pattern recognition, and unplugged problem-solving. Students use visual programming to build simple games and animations, learning loops, conditionals, and decomposition.</p>
+        </div>
+      </div>
+      <div class="spine-phase">
+        <div class="spine-years">Years 4 &ndash; 6</div>
+        <div class="spine-content">
+          <h3>Structured Programming</h3>
+          <p>Transition from blocks to text-based code. Introduction to Python fundamentals: variables, functions, data types. Projects include quiz apps, simple simulations, and data visualisations from real-world datasets.</p>
+        </div>
+      </div>
+      <div class="spine-phase">
+        <div class="spine-years">Years 7 &ndash; 9</div>
+        <div class="spine-content">
+          <h3>Applied Development &amp; AI Foundations</h3>
+          <p>Full-stack web basics (HTML, CSS, JavaScript), version control with Git, and API integration. AI literacy begins: how models are trained, prompt engineering, building with AI APIs, and evaluating model outputs for bias and accuracy.</p>
+        </div>
+      </div>
+      <div class="spine-phase">
+        <div class="spine-years">Years 10 &ndash; 11</div>
+        <div class="spine-content">
+          <h3>Advanced Projects &amp; Portfolio</h3>
+          <p>Students undertake extended projects: training classifiers on custom datasets, building full-stack applications, and automating real workflows. This phase produces the portfolio artefacts that demonstrate genuine competence to universities and employers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PARTNERSHIP -->
+<section class="section" id="partnership">
+  <p class="section-label">How the Partnership Works</p>
+  <h2>We split the work cleanly</h2>
+  <p class="section-intro">ILMERE handles the specialised components. Your school provides the access and environment. Neither side duplicates the other's effort.</p>
+
+  <div class="partnership-layout">
+    <div class="partner-col we-bring">
+      <h3>ILMERE Brings</h3>
+      <ul>
+        <li>Curriculum designed and maintained by our team</li>
+        <li>Purpose-built teaching platform and student environment</li>
+        <li>Vetted, trained specialist instructors</li>
+        <li>Ongoing instructor development and quality assurance</li>
+        <li>Termly progress reports for every student</li>
+        <li>Alignment with British curriculum computing standards</li>
+      </ul>
+    </div>
+    <div class="partner-col school-brings">
+      <h3>Your School Provides</h3>
+      <ul>
+        <li>One timetabled period per week per year group</li>
+        <li>A room with desks, power, and internet access</li>
+        <li>Student devices (laptops or tablets, existing fleet is fine)</li>
+        <li>A named coordinator for scheduling and communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- GETTING STARTED -->
+<div class="start-bg" id="start">
+  <section class="section">
+    <p class="section-label">Getting Started</p>
+    <h2>One term, one year group</h2>
+    <p class="section-intro">We start small so both sides can evaluate the fit. A single-term pilot with one year group, then decide together whether to expand.</p>
+
+    <div class="start-steps">
+      <div class="start-step">
+        <h4>Introductory Meeting</h4>
+        <p>We discuss your school's priorities, existing computing provision, and where ILMERE fits.</p>
+      </div>
+      <div class="start-step">
+        <h4>Pilot Proposal</h4>
+        <p>We recommend a year group and deliver a scoped plan: curriculum outline, schedule, and resource requirements.</p>
+      </div>
+      <div class="start-step">
+        <h4>One-Term Pilot</h4>
+        <p>Our instructor teaches on site for one term. You observe, we report, students build.</p>
+      </div>
+      <div class="start-step">
+        <h4>Review &amp; Decide</h4>
+        <p>At the end of the pilot we share a detailed outcome report. You decide whether and how to continue.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="footer-brand">ILMERE<span>.</span></span>
+      <span class="footer-tagline">Where knowledge is built.</span>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:saqib@ilmere.com">saqib@ilmere.com</a>
+    </div>
+    <p class="footer-note">ILMERE Academy &middot; Cairo, Egypt</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// Close mobile nav on link click
+document.querySelectorAll('#navLinks a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
