@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <title>ILMERE</title>
+  <rect width="192" height="192" rx="42.24" fill="#16214D"/>
+  <rect x="37.44" y="36.38" width="117.12" height="35.52" rx="6.75" fill="#F4A81D"/>
+  <rect x="60.86" y="36.38" width="30.45" height="8.64" rx="4.32" fill="#16214D"/>
+  <rect x="37.44" y="78.24" width="117.12" height="35.52" rx="6.75" fill="#12889A"/>
+  <rect x="60.86" y="78.24" width="30.45" height="8.64" rx="4.32" fill="#16214D"/>
+  <rect x="37.44" y="120.10" width="117.12" height="35.52" rx="6.75" fill="#D9E4FA"/>
+  <rect x="60.86" y="120.10" width="30.45" height="8.64" rx="4.32" fill="#16214D"/>
+  <rect x="60.86" y="155.62" width="30.45" height="8.64" rx="4.32" fill="#D9E4FA"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="170" viewBox="0 0 620 170">
+  <title>ILMERE Academy — Coding &amp; AI</title>
+  <rect width="620" height="170" fill="#FFFFFF"/>
+  <rect x="40" y="33" width="104" height="104" rx="22.9" fill="#16214D"/>
+  <rect x="60.28" y="52.71" width="63.44" height="19.24" rx="3.66" fill="#F4A81D"/>
+  <rect x="72.97" y="52.71" width="16.49" height="4.68" rx="2.34" fill="#16214D"/>
+  <rect x="60.28" y="75.38" width="63.44" height="19.24" rx="3.66" fill="#12889A"/>
+  <rect x="72.97" y="75.38" width="16.49" height="4.68" rx="2.34" fill="#16214D"/>
+  <rect x="60.28" y="98.05" width="63.44" height="19.24" rx="3.66" fill="#D9E4FA"/>
+  <rect x="72.97" y="98.05" width="16.49" height="4.68" rx="2.34" fill="#16214D"/>
+  <rect x="72.97" y="117.29" width="16.49" height="4.68" rx="2.34" fill="#D9E4FA"/>
+  <text x="178" y="88" font-family="Georgia, Cambria, serif" font-size="52" font-weight="700" fill="#16214D" letter-spacing="7">ILMERE</text>
+  <text x="181" y="116" font-family="Calibri, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#F4A81D" letter-spacing="4.5">ACADEMY — CODING &amp; AI</text>
+</svg>

@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ILMERE Academy — Coding &amp; AI as a Timetabled Subject</title>
 <meta name="description" content="ILMERE Academy delivers real coding and AI literacy as a timetabled subject inside British-curriculum international schools in Cairo, using our own instructors on site.">
+<link rel="icon" href="assets/brand/ilmere-icon-32.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#16214D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ILMERE Academy">
+<meta property="og:title" content="ILMERE Academy — Coding &amp; AI as a Timetabled Subject">
+<meta property="og:description" content="Real coding and AI literacy as a timetabled subject inside British-curriculum international schools in Cairo, taught by our own instructors on site.">
+<meta property="og:image" content="https://ilmere.com/assets/brand/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ILMERE Academy — Coding &amp; AI">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -61,6 +75,8 @@ h1, h2, h3, h4 {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.35rem;
@@ -69,7 +85,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.04em;
 }
 
-.nav-logo span { color: var(--gold); }
+.nav-logo img { width: 34px; height: 34px; display: block; margin-right: 0.6rem; }
 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 
@@ -388,13 +404,16 @@ h1, h2, h3, h4 {
 }
 
 .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--white);
 }
 
-.footer-brand span { color: var(--gold); }
+.footer-brand img { width: 28px; height: 28px; display: block; margin-right: 0.5rem; }
 
 .footer-tagline {
   font-size: 0.8rem;
@@ -461,7 +480,7 @@ h1, h2, h3, h4 {
 <!-- NAV -->
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">ILMERE<span>.</span></a>
+    <a href="#" class="nav-logo" aria-label="ILMERE Academy home"><img src="assets/brand/ilmere-icon-64.svg" alt="" width="34" height="34">ILMERE</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#deliver">What We Deliver</a></li>
       <li><a href="#curriculum">Curriculum</a></li>
@@ -617,7 +636,7 @@ h1, h2, h3, h4 {
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <span class="footer-brand">ILMERE<span>.</span></span>
+      <span class="footer-brand"><img src="assets/brand/ilmere-icon-64.svg" alt="" width="28" height="28">ILMERE</span>
       <span class="footer-tagline">Where knowledge is built.</span>
     </div>
     <div class="footer-contact">
